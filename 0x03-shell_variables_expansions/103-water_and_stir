@@ -1,6 +1,2 @@
 #!/bin/bash
-water_num=$(echo $WATER | base64 -d)
-stir_num=$(echo $STIR | base64 -d)
-sum=$((water_num + stir_num))
-bestchol=$(echo $sum | base64 -b bestchol)
-echo $bestchol_num
+echo $(echo $WATER | base64 -d) + $(echo $STIR | base64 -d) | base64 -b bestchol
